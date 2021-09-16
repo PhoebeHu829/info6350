@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RollingDice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJF-mO-LS1">
+                                <rect key="frame" x="50" y="20" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="8eA-2c-ZSY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Below 7 ">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="below7Press:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aIU-u5-TkM"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice3" translatesAutoresizingMaskIntoConstraints="NO" id="ckH-Z0-IPO">
+                                <rect key="frame" x="50" y="80" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="KFT-Da-yuy"/>
+                                    <constraint firstAttribute="height" constant="70" id="StP-jC-HAF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice5" translatesAutoresizingMaskIntoConstraints="NO" id="WZe-q3-ZaN">
+                                <rect key="frame" x="140" y="80" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="HKW-kA-CQp"/>
+                                    <constraint firstAttribute="width" constant="70" id="ZeD-is-dCB"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xt7-U2-7O5">
+                                <rect key="frame" x="200" y="20" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="OeZ-ZT-Adx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Above 7">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="Above7Press:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lqZ-j2-WcT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ato-xX-txa">
+                                <rect key="frame" x="125" y="20" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="1Xp-eR-hrj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Lucky 7 ">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="lucky7Press:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O00-L9-YGg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Total Score is 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ia3-mF-ww0">
+                                <rect key="frame" x="50" y="195" width="220" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="4b7-6E-Jrp"/>
+                                    <constraint firstAttribute="height" constant="25" id="gDZ-Ra-zaJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ato-xX-txa" firstAttribute="leading" secondItem="DJF-mO-LS1" secondAttribute="trailing" constant="5" id="5dG-hf-AQ9"/>
+                            <constraint firstItem="ckH-Z0-IPO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="A9o-6U-iJ8"/>
+                            <constraint firstItem="DJF-mO-LS1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UKI-aQ-bIJ"/>
+                            <constraint firstItem="xt7-U2-7O5" firstAttribute="leading" secondItem="ato-xX-txa" secondAttribute="trailing" constant="5" id="a9P-KA-4hQ"/>
+                            <constraint firstItem="DJF-mO-LS1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="dx5-zY-Pmk"/>
+                            <constraint firstItem="ia3-mF-ww0" firstAttribute="top" secondItem="ckH-Z0-IPO" secondAttribute="bottom" constant="45" id="eZS-ZY-1FX"/>
+                            <constraint firstItem="WZe-q3-ZaN" firstAttribute="top" secondItem="xt7-U2-7O5" secondAttribute="bottom" constant="30" id="jnH-dH-2uJ"/>
+                            <constraint firstItem="ckH-Z0-IPO" firstAttribute="top" secondItem="DJF-mO-LS1" secondAttribute="bottom" constant="30" id="ptH-b4-zoc"/>
+                            <constraint firstItem="ia3-mF-ww0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="q29-Qq-Rqm"/>
+                            <constraint firstItem="WZe-q3-ZaN" firstAttribute="leading" secondItem="ckH-Z0-IPO" secondAttribute="trailing" constant="20" id="q5D-8o-Olm"/>
+                            <constraint firstItem="ato-xX-txa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="qbf-v9-Cux"/>
+                            <constraint firstItem="xt7-U2-7O5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="zmp-uE-B9M"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgDiceOne" destination="ckH-Z0-IPO" id="QWB-AN-hi4"/>
+                        <outlet property="imgDiceTwo" destination="WZe-q3-ZaN" id="6QB-If-Bak"/>
+                        <outlet property="totalScore" destination="ia3-mF-ww0" id="QuU-lA-jhS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-637.5" y="131.25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Dice3" width="18.5" height="18.5"/>
+        <image name="Dice5" width="18.5" height="18.5"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
